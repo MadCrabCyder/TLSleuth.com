@@ -19,6 +19,7 @@ group :jekyll_plugins do
 end
 
 gem "jekyll-remote-theme"
+
 gem "faraday-retry"   # silences the Faraday retry message
 
 
