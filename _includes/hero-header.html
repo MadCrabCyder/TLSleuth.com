@@ -1,0 +1,10 @@
+<header class="page-header hero-header" role="banner">
+  <div class="hero-wrapper">
+    <img src="{{ '/assets/images/sleuth.png' | relative_url }}" alt="TLSleuth logo" class="header-logo">
+    <div class="hero-text">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      {% include menu.html %}
+    </div>
+  </div>
+</header>

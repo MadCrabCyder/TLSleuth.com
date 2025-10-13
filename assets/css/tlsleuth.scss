@@ -1,0 +1,156 @@
+---
+---
+
+@import "variables";
+
+/* HERO: logo on the left, text+menu centered on page */
+.hero-header {
+  background: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  color: $header-heading-color;
+  padding: 2rem 1rem 2rem;
+}
+
+.hero-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  /* 3 columns: [logo] [centered content] [spacer] */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.header-logo {
+  grid-column: 1;
+  justify-self: end;        /* snugs logo up to the center block */
+  height: 150px;
+  width: auto;
+  border-radius: 16px;
+  // box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+
+.hero-text {
+  grid-column: 2;
+  justify-self: center;     /* keeps text exactly centered in page */
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero-text h1.project-name {
+  margin: 0 0 .5rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.hero-text h2.project-tagline {
+  margin: 0 0 1.5rem;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.hero-text .btn { margin: .25rem; }
+
+/* Mobile: stack and center */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+  .header-logo {
+    grid-column: 1;
+    justify-self: center;
+    height: 80px;
+  }
+  .hero-text {
+    grid-column: 1;
+  }
+}
+
+.small-header {
+  background: linear-gradient(120deg, $header-bg-color-secondary, $header-bg-color);
+  color: $header-heading-color;
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.small-wrapper {
+  max-width: 55rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* [left spacer] [content stretch] [buttons] */
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Left section (logo + title) */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-left .header-logo {
+  height: 45px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.header-left .project-name {
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 700;
+  color: $header-heading-color;
+}
+
+/* Right section (buttons) */
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-right .btn {
+  display: inline-flex;
+  align-items: center;   /* centers text within each button */
+  justify-content: center;
+  // line-height: 1.2;
+  // height: 36px;          /* optional fixed height for even alignment */
+  margin-bottom: 0em;
+}
+
+/* SITE FOOTER */
+.site-footer {
+  background-color: #f5f5f5;          /* light grey background */
+  color: #555;                        /* medium grey text */
+  text-align: center;                 /* center text horizontally */
+  padding: 1.5rem 1rem;               /* comfortable spacing */
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-top: 1px solid #e0e0e0;      /* subtle separation line */
+}
+
+.site-footer a {
+  color: #0366d6;                     /* link color consistent with theme */
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.site-footer-owner,
+.site-footer-credits {
+  display: block;                     /* stack lines vertically */
+  margin: 0.25rem 0;
+}
+
+/* Optional: smaller screens */
+@media (max-width: 640px) {
+  .site-footer {
+    font-size: 0.9rem;
+    padding: 1.25rem 0.75rem;
+  }
+}
+

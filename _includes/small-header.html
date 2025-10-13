@@ -1,0 +1,16 @@
+<header class="small-header" role="banner">
+  <div class="small-wrapper">
+    <div class="header-left">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ '/assets/images/sleuth.png' | relative_url }}" alt="TLSleuth logo" class="header-logo">
+      </a>
+      <h1 class="project-name">
+        {{ page.title | default: site.title | default: site.github.repository_name }}
+      </h1>
+    </div>
+
+    <div class="header-right">
+      {% include menu.html %}
+    </div>
+  </div>
+</header>
