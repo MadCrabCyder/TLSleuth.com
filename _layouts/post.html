@@ -2,5 +2,25 @@
 layout: default
 ---
 
-  {{ content }}
+{{ content }}
+
+{% if page.series and page.part %}
+  {% assign series_posts = site.posts | where: "series", page.series | sort: "part" %}
+  {% if series_posts.size > 0 %}
+  <hr>
+  <h2>{{ page.series }}</h2>
+  <ul>
+    {% for post in series_posts %}
+      <li>
+        {% if post.url == page.url %}
+          <strong>Part {{ post.part }}: {{ post.title }} (current)</strong>
+        {% else %}
+          <a href="{{ post.url | relative_url }}">Part {{ post.part }}: {{ post.title }}</a>
+        {% endif %}
+        <!-- <p>{{ post.excerpt }}</p> -->
+      </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+{% endif %}
 

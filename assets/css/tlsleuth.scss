@@ -154,3 +154,16 @@
   }
 }
 
+/* Mermaid diagrams: consistent width and responsive scaling */
+.main-content .mermaid {
+  width: min(100%, 48rem);
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content .mermaid svg {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+}
