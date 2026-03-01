@@ -2,6 +2,7 @@
 layout: post
 title: "Dedicated TLS Scanners"
 date: 2025-09-15
+permalink: /blog/dedicated-scanners.html
 tags: [tls, certificates, scanners, security]
 ---
 
