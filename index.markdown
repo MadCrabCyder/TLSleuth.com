@@ -44,6 +44,8 @@ This allows TLSleuth to:
 - Upgrade the connection to TLS
 - Retrieve certificate and negotiated TLS details
 
+For more information see this page: [Implicit vs Explicit TLS](/blog/implicit-vs-explicit-tls.html)
+
 ------------------------------------------------------------------------
 
 # Installation
