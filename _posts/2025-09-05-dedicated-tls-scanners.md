@@ -31,7 +31,7 @@ TLSleuth rides on the .NET `SslStream` and the underlying OS TLS stack (SChannel
   Availability depends on the host OS and .NET runtime. PowerShell 5.1 on older Windows has no TLS 1.3 at all.
 
 - ❌ **Minimal handshake tweaking**
-  Things like client hello customization, curve ordering, compression flags, resumption tickets, or STARTTLS upgrades are out of reach.
+  Things like client hello customization, curve ordering, compression flags or resumption tickets are out of reach.
 
 That’s fine for **scripting, monitoring, and quick cert checks**, but not for **auditing a server’s full TLS posture**.
 

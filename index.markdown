@@ -28,19 +28,22 @@ engineers, and automation pipelines that need reliable TLS insight.
 - **Pipeline support** -- Designed for batch processing.
 - **Verbose diagnostics** -- `-Verbose` provides helper-level timing
     insight.
-- **Safe collections** -- Arrays are never `$null`.
 - **Tested** -- Unit tests with mocks; optional integration tests.
 
-## New Feature for 2.0.0 - Explicit Transport Support
+## New Feature for Version 2 - Explicit Transport Support
 
 - Added support for specifying the transport type
 - New transport option: `SmtpStartTls`
+- New transport option: `ImapStartTls`
+- New transport option: `Pop3StartTls`
 
-You can now retrieve certificates from SMTP servers using `STARTTLS` negotiation, rather than assuming implicit TLS (e.g., SMTPS on port 465).
+You can now retrieve certificates from SMTP, IMAP, and POP3 servers using `STARTTLS`/`STLS` negotiation, rather than assuming implicit TLS (e.g., SMTPS on port 465, IMAPS on port 993, or POP3S on port 995).
 
 This allows TLSleuth to:
 - Connect to SMTP services on port 25 or 587
-- Issue the STARTTLS command
+- Connect to IMAP services on port 143
+- Connect to POP3 services on port 110
+- Issue the STARTTLS/STLS command
 - Upgrade the connection to TLS
 - Retrieve certificate and negotiated TLS details
 
@@ -48,9 +51,24 @@ For more information see this page: [Implicit vs Explicit TLS](/blog/implicit-vs
 
 ------------------------------------------------------------------------
 
-# Installation
+## Limitations and When to Use a Dedicated TLS Scanner
 
-## From PowerShell Gallery
+TLSleuth is designed for practical, scriptable TLS inspection - retrieving the negotiated certificate, protocol, and cipher from PowerShell.
+
+Because it relies on `.NET SslStream` and the underlying OS TLS stack (SChannel on Windows), it has intentional limitations:
+
+- It only shows the negotiated cipher suite (no full enumeration)
+- It cannot probe for TLS vulnerabilities (Heartbleed, ROBOT, etc.)
+- It cannot craft custom ClientHello messages or test fallback behavior
+- TLS version and cipher availability depend on OS policy
+
+For full TLS posture analysis, cipher enumeration, downgrade testing, and vulnerability scanning, use a [Dedicated TLS Scanner](/blog/dedicated-scanners.html)
+
+------------------------------------------------------------------------
+
+## Installation
+
+### From PowerShell Gallery
 
 ``` powershell
 Install-Module TLSleuth -Scope CurrentUser
@@ -62,7 +80,7 @@ Supported: Windows PowerShell 5.1 (reduced TLS/cipher detail)
 
 ------------------------------------------------------------------------
 
-# Quick Start
+## Quick Start
 
 ``` powershell
 # Fetch certificate + handshake details
@@ -87,7 +105,7 @@ Get-TLSleuthCertificate -Hostname smtp.gmail.com -port 25 -Transport SmtpStartTl
 
 ------------------------------------------------------------------------
 
-# Output Model
+## Output Model
 
 TLSleuth returns a structured object:
 
