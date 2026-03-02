@@ -66,17 +66,23 @@ For full TLS posture analysis, cipher enumeration, downgrade testing, and vulner
 
 ------------------------------------------------------------------------
 
-## Installation
+## Installation and Updating
 
-### From PowerShell Gallery
+### Install from PowerShell Gallery
 
 ``` powershell
 Install-Module TLSleuth -Scope CurrentUser
 Import-Module TLSleuth
 ```
 
-Recommended: **PowerShell 7+**
-Supported: Windows PowerShell 5.1 (reduced TLS/cipher detail)
+### Update from PowerShell Gallery
+
+``` powershell
+Update-Module TLSleuth
+```
+
+> Recommended: **PowerShell 7+**
+> Supported: Windows PowerShell 5.1 (reduced TLS/cipher detail)
 
 ------------------------------------------------------------------------
 
@@ -99,6 +105,16 @@ Get-TLSleuthCertificate -Hostname microsoft.com -Verbose
 
 # New in V2.0.0 - Retrieve certificate from SMTP server
 Get-TLSleuthCertificate -Hostname smtp.gmail.com -port 25 -Transport SmtpStartTls
+
+# New in V2.1.0 - Retrieve certificate from IMAP server
+Get-TLSleuthCertificate -Hostname outlook.office365.com -Port 143 -Transport ImapStartTls
+
+# New in V2.1.0 - Retrieve certificate from POP3 server
+Get-TLSleuthCertificate -Hostname pop.gmail.com -Port 110 -Transport Pop3StartTls
+
+# Retrieve an invalid certificate but keep validation diagnostics
+Get-TLSleuthCertificate -Hostname wrong.host.badssl.com -SkipCertificateValidation |
+  Select Hostname, CertificateValidationPassed, CertificatePolicyErrors, CertificatePolicyErrorFlags
 ```
 
 > When connecting by IP but requiring proper SNI, use `-TargetHost example.com`.
