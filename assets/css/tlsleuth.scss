@@ -77,36 +77,46 @@
 .small-wrapper {
   max-width: 55rem;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto 1fr auto; /* [left spacer] [content stretch] [buttons] */
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
 
-/* Left section (logo + title) */
-.header-left {
+.small-top {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 0.75rem;
 }
 
-.header-left .header-logo {
-  height: 45px;
+.small-logo {
+  grid-column: 1;
+  justify-self: end;        /* snugs logo up to the center block */
+  height: 75px;
   width: auto;
-  border-radius: 8px;
+  border-radius: 16px;
+  // box-shadow: 0 0 6px rgba(0,0,0,0.25);
 }
 
-.header-left .project-name {
-  font-size: 1.4rem;
-  margin: 0;
-  font-weight: 700;
-  color: $header-heading-color;
+/* Center section (logo) */
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-left .header-logo {
+  height: 150px;
+  width: auto;
+  border-radius: 8px;
 }
 
 /* Right section (buttons) */
 .header-right {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  flex-wrap: nowrap;
   align-items: center;
   gap: 0.5rem;
 }
@@ -118,6 +128,15 @@
   // line-height: 1.2;
   // height: 36px;          /* optional fixed height for even alignment */
   margin-bottom: 0em;
+}
+
+.small-wrapper .project-name {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  color: $header-heading-color;
 }
 
 /* SITE FOOTER */
@@ -152,6 +171,13 @@
     font-size: 0.9rem;
     padding: 1.25rem 0.75rem;
   }
+}
+
+/* Blog/content tables: full width */
+.main-content table {
+  display: table;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* Mermaid diagrams: consistent width and responsive scaling */
