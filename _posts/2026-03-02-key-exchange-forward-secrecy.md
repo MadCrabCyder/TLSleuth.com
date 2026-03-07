@@ -5,7 +5,7 @@ date: 2026-03-02
 title: "Key Exchange and Forward Secrecy"
 excerpt: "An in-depth exploration of the key distribution problem, Diffie-Hellman key exchange, elliptic curve cryptography, and forward secrecy — and how these mechanisms form the foundation of modern TLS handshakes."
 
-tags: [TLS, PKI, Diffie-Hellman, Forward-Secrecy, Key-Exchange]
+tags: [tls, key-exchange, diffie-hellman, elliptic-curve-cryptography, forward-secrecy, pfs]
 
 series: TLS & Certificate Infrastructure Deep Dive
 part: 2

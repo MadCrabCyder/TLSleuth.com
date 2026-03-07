@@ -6,18 +6,12 @@ title: "Subject Public Key Info (SPKI) Deep Dive"
 permalink: /blog/subject-public-key-info-deep-dive.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - x509
+  - spki
+  - public-key-cryptography
+  - rsa
+  - ecdsa
 
 series: Certificates Explained Properly
 part: 4

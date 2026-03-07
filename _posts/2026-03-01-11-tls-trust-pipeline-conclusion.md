@@ -6,18 +6,12 @@ title: "The TLS Trust Pipeline (Conclusion)"
 permalink: /blog/tls-trust-pipeline.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - pki
+  - certificate-validation
+  - trust-stores
+  - hostname-validation
+  - certificate-revocation
 
 series: Certificates Explained Properly
 part: 11

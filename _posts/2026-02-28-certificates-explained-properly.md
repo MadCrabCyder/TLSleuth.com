@@ -6,18 +6,16 @@ title: "Certificates Explained Properly"
 excerpt: "A deep technical exploration of X.509 certificates — ASN.1 structure, extensions, path validation, and how trust is actually established in modern PKI."
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - x509
+  - pki
+  - web-pki
+  - certificate-validation
+  - certificate-chains
+  - rfc5280
+  - rfc6125
+  - trust-stores
+  - certificate-revocation
 
 series: TLS & Certificate Infrastructure Deep Dive
 part: 3

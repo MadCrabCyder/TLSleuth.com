@@ -2,7 +2,7 @@
 layout: post
 title: "TLSleuth Website Launch"
 date: 2025-10-13
-tags: [announcement, github-pages, jekyll, project, tlsleuth]
+tags: [tlsleuth, announcement, project-update, jekyll, github-pages, documentation]
 ---
 
 # 🎉 TLSleuth Website Launch – Built with Jekyll & GitHub Pages

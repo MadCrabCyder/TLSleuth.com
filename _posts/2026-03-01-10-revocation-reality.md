@@ -6,18 +6,12 @@ title: "Revocation Reality"
 permalink: /blog/revocation-reality.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - pki
+  - certificate-revocation
+  - crl
+  - ocsp
+  - ocsp-stapling
 
 series: Certificates Explained Properly
 part: 10

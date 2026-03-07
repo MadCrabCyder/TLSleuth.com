@@ -3,7 +3,7 @@ layout: post
 title: "Dedicated TLS Scanners"
 date: 2025-09-15
 permalink: /blog/dedicated-scanners.html
-tags: [tls, certificates, scanners, security]
+tags: [tls, tls-scanning, certificate-analysis, security-testing, openssl, testssl, sslyze]
 ---
 
 # When to Use Dedicated TLS Scanners

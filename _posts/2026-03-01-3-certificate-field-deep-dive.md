@@ -6,18 +6,12 @@ title: "Certificate Field Deep Dive"
 permalink: /blog/certificate-field-deep-dive.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - x509
+  - certificates
+  - certificate-fields
+  - asn1
+  - der
 
 series: Certificates Explained Properly
 part: 3

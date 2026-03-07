@@ -5,7 +5,7 @@ date: 2026-03-02
 title: "Hybrid TLS Cryptographic Model"
 excerpt: ""
 
-tags: [TLS, PKI, Cryptography, Encryption, Hashing, Digital Signatures]
+tags: [tls, cryptography, tls-handshake, key-exchange, digital-signatures, aead, diagram]
 
 ---
 

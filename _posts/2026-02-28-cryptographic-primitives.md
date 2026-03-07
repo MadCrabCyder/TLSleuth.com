@@ -5,7 +5,7 @@ date: 2026-02-28
 title: "Cryptographic Foundations - Primitives"
 excerpt: "An advanced technical exploration of the core cryptographic primitives that underpin TLS and certificate infrastructure — hashing, symmetric encryption, asymmetric keys, digital signatures, and authenticated encryption."
 
-tags: [TLS, PKI, Cryptography, Encryption, Hashing, Digital Signatures]
+tags: [tls, cryptography, hashing, symmetric-encryption, asymmetric-cryptography, digital-signatures, aead]
 
 series: TLS & Certificate Infrastructure Deep Dive
 part: 1

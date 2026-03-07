@@ -6,18 +6,12 @@ title: "Certificate Chain Building Algorithms"
 permalink: /blog/certificate-chain-building-algorithms.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - x509
+  - certificate-chains
+  - path-building
+  - aia
+  - trust-stores
 
 series: Certificates Explained Properly
 part: 6

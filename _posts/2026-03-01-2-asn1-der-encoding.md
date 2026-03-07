@@ -6,18 +6,12 @@ title: "ASN.1 and DER Encoding"
 permalink: /blog/asn-1-and-der-encoding.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - x509
+  - asn1
+  - der
+  - encoding
+  - certificate-parsing
 
 series: Certificates Explained Properly
 part: 2

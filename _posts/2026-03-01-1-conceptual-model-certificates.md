@@ -6,18 +6,12 @@ title: "The Conceptual Model of Certificates"
 permalink: /blog/conceptual-model-of-certificates.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - x509
+  - pki
+  - certificates
+  - trust-model
+  - certificate-authorities
 
 series: Certificates Explained Properly
 part: 1

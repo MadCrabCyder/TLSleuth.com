@@ -6,18 +6,12 @@ title: "Trust Stores and Root Programs"
 permalink: /blog/trust-stores-and-root-programs.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - pki
+  - trust-stores
+  - root-programs
+  - certificate-authorities
+  - web-pki
 
 series: Certificates Explained Properly
 part: 9

@@ -7,18 +7,14 @@ permalink: /blog/certificate-extensions-deep-dive.html
 
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - x509
+  - certificate-extensions
+  - san
+  - key-usage
+  - extended-key-usage
+  - basic-constraints
+  - name-constraints
 
 series: Certificates Explained Properly
 part: 5

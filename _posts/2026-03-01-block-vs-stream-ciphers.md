@@ -7,7 +7,7 @@ title: "Block Ciphers vs Stream Ciphers"
 
 excerpt: ""
 
-tags: [TLS, PKI, Cryptography, Encryption, Hashing, Digital Signatures]
+tags: [tls, cryptography, symmetric-encryption, block-ciphers, stream-ciphers, aes, chacha20]
 
 ---
 
@@ -226,7 +226,6 @@ The most important architectural insight is this:
 TLS uses asymmetric cryptography only long enough to establish a shared secret.
 
 After that point, the entire session relies on symmetric encryption to deliver both security and performance.
-
 
 
 

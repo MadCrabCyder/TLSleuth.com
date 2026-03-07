@@ -6,18 +6,12 @@ title: "RFC 5280 Path Validation Algorithm"
 permalink: /blog/rfc5280-path-validation-algorithm.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - x509
+  - rfc5280
+  - path-validation
+  - certificate-policies
+  - name-constraints
 
 series: Certificates Explained Properly
 part: 7

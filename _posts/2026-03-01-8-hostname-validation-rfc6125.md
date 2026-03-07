@@ -6,18 +6,12 @@ title: "Hostname Validation (RFC 6125)"
 permalink: /blog/hostname-validation-rfc6125.html
 
 tags:
-  - TLS
-  - X509
-  - PKI
-  - Certificates
-  - ASN1
-  - DER
-  - SAN
-  - Key Usage
-  - Extended Key Usage
-  - Basic Constraints
-  - Certificate Chain
-  - Path Validation
+  - tls
+  - x509
+  - rfc6125
+  - hostname-validation
+  - san
+  - identity-verification
 
 series: Certificates Explained Properly
 part: 8

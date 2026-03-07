@@ -6,18 +6,13 @@ permalink: /blog/implicit-vs-explicit-tls.html
 title: "Implicit vs Explicit TLS"
 excerpt: "A deep technical analysis of implicit TLS vs STARTTLS, downgrade risks, historical design trade-offs, and operational implications for modern infrastructure."
 
-categories:
-  - Security
-  - Cryptography
-  - Infrastructure
-  - TLS
 tags:
-  - TLS
-  - STARTTLS
-  - PKI
-  - SMTP
-  - Downgrade Attacks
-  - Transport Security
+  - tls
+  - starttls
+  - smtp
+  - transport-security
+  - downgrade-attacks
+  - opportunistic-encryption
 ---
 
 ## Implicit vs Explicit TLS
