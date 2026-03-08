@@ -19,16 +19,17 @@ engineers, and automation pipelines that need reliable TLS insight.
 
 ## Features
 
-- **SNI-aware** -- Automatically uses SNI based on `-Hostname` (or
-    `-TargetHost` override).
-- **Protocol selection** -- Constrain to `Tls12`, `Tls13`, etc.
-    (OS/runtime permitting).
-- **Structured output** -- Stable object model with custom
-    `PSTypeName`.
-- **Pipeline support** -- Designed for batch processing.
-- **Verbose diagnostics** -- `-Verbose` provides helper-level timing
-    insight.
-- **Tested** -- Unit tests with mocks; optional integration tests.
+- **Certificate + handshake inspection** -- `Get-TLSleuthCertificate` returns certificate metadata, validation results, and negotiated TLS/session details.
+- **Protocol compatibility testing** -- `Test-TLSleuthProtocol` tests runtime-available explicit protocol versions and returns per-protocol outcomes.
+- **Transport-aware negotiation** -- Supports `ImplicitTls`, `SmtpStartTls`, `ImapStartTls`, and `Pop3StartTls`.
+- **SNI-aware** -- Automatically uses SNI from `-Hostname` with optional `-TargetHost` override.
+- **Structured output** -- Stable, script-friendly object contracts (`TLSleuth.CertificateResult` and `TLSleuth.ProtocolTestResult`).
+- **Pipeline support** -- Designed for batch processing across multiple hosts.
+- **Verbose diagnostics** -- `-Verbose` provides helper-level lifecycle and timing insight.
+- **Safe collections** -- Collection properties are returned as arrays, not `$null`.
+- **Tested** -- Pester unit tests with mocks and integration coverage for handshake/STARTTLS flows.
+
+------------------------------------------------------------------------
 
 ## New Feature for Version 2 - Explicit Transport Support
 
@@ -50,6 +51,18 @@ This allows TLSleuth to:
 For more information see this page: [Implicit vs Explicit TLS](/blog/implicit-vs-explicit-tls.html)
 
 ------------------------------------------------------------------------
+## New Feature for Version 2.3 - Testing Supported TLS Protocols
+
+New Command: `Test-TLSleuthProtocol`
+
+TLSleuth now includes `Test-TLSleuthProtocol`, a command designed to quickly evaluate which TLS protocol versions successfully negotiate with a remote endpoint. The command iterates through all TLS protocol versions available in the current runtime (`Ssl3`, `Tls`, `Tls11`, `Tls12`, `Tls13` where supported) and performs an independent connection and handshake attempt for each. Results are returned as structured objects showing whether the connection succeeded, along with negotiated session details such as protocol version, cipher suite, and forward secrecy status when available.
+
+This makes it easier to verify protocol support across servers without manually running multiple tests.
+
+For a deeper explanation of how the command works and examples of how to use it, see the full article: [Testing Supported TLS Protocols with TLSleuth](/blog/test-tls-protocols.html)
+
+------------------------------------------------------------------------
+
 
 ## Limitations and When to Use a Dedicated TLS Scanner
 
@@ -142,6 +155,8 @@ Get-TLSleuthCertificate -Hostname wrong.host.badssl.com -SkipCertificateValidati
 Example:
 
 ``` powershell
+Get-TlsleuthCertificate -Hostname github.com
+
 PSTypeName                  : TLSleuth.CertificateResult
 Hostname                    : github.com
 Port                        : 443
@@ -194,6 +209,8 @@ Properties include:
 Example output (one successful protocol attempt and one failed attempt):
 
 ``` powershell
+Test-TLSleuthProtocol -Hostname github.com
+
 PSTypeName                    : TLSleuth.ProtocolTestResult
 Hostname                      : github.com
 Port                          : 443

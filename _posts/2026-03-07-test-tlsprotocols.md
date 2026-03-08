@@ -1,8 +1,9 @@
 ---
 layout: post
-date: 2026-03-07 09:00:00 +1100
+date: 2026-03-07
 title: "Testing Supported TLS Protocols with TLSleuth"
 excerpt: "TLSleuth adds Test-TLSleuthProtocol, a PowerShell command that tests which TLS protocol versions actually succeed against a target endpoint."
+permalink: /blog/test-tls-protocols.html
 
 tags:
   - powershell
@@ -24,8 +25,6 @@ Test-TLSleuthProtocol
 ```
 
 This command attempts a TLS handshake using each protocol version available in the current runtime and returns a structured result for each attempt.
-
-This feature is scheduled for the **next release after TLSleuth 2.2.0**, with a release date of **2026‑03‑07**.
 
 ---
 
